@@ -1,14 +1,16 @@
-var moviesJSON = require('../movies.json');
+var moviesJSON = require('../db.json');
 
 
 //home
 exports.home = function(req, res) {
     
-    var movies = moviesJSON.movies;
+    var anime = moviesJSON.anime;
 
     res.render('home', {
         title : "Anime",
         title2 : "Wars",
-        movies : movies
+        title3 : "Welcome to my blog",
+        anime : anime
+
     });
   };

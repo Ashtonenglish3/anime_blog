@@ -4,10 +4,13 @@
   <% include partials/head.ejs %>
   </head>
   <body>
-     
+       
+      <% include partials/header.ejs %>
+
     <div id="hero-image">
         <h1 id="hero-title"><%= title %></h1>
         <h1 id="hero-title2"><%= title2 %></h1>
+        <h1 id="hero-title3"><%= title3 %></h1>
     </div>
 
      <div id="posters-wrapper" class="content-padding clearfix">
@@ -18,6 +21,7 @@
         <div class="poster-info-overlay">
           <h2><%= movies[i].title %></h2>
           <p><%= movies[i].sub_description %></p>
+          <p>Read more<i class="fas fa-angle-right"></i></p>
         </div>
       </div> 
         <% } %>

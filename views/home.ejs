@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <% include partials/head.ejs %>
+  </head>
+  <body>
+     
+    <div id="hero-image">
+        <h1 id="hero-title"><%= title %></h1>
+        <h1 id="hero-title2"><%= title2 %></h1>
+    </div>
+
+     <div id="posters-wrapper" class="content-padding clearfix">
+
+      <%  for (var i = 0; i < movies.length; i++) { %>
+        <div class="poster">
+        <img src="/images/<%= movies[i].poster %> " class="img-responsive" alt="">
+        <div class="poster-info-overlay">
+          <h2><%= movies[i].title %></h2>
+          <p><%= movies[i].sub_description %></p>
+        </div>
+      </div> 
+        <% } %>
+      
+     </div>
+
+ 
+    <% include partials/scripts.ejs %>
+  </body>
+</html>

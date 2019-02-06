@@ -7,7 +7,10 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
-var routes = require('./routes');
+var routes = [
+    require('./routes'),
+    require('./routes/register'),
+];
 
 var path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -16,7 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //home
 app.get('/', routes.index);
-app.get('/', partials.nav);
 
 // app.get('/darth', function(req, res) {
 //     res.send("This is a server  response on the darth page");
@@ -25,3 +27,5 @@ app.get('/', partials.nav);
 app.listen(3000, function() {
     console.log("The application is running on localhost:3000");
 });
+
+app.use('/register', routes[5]);

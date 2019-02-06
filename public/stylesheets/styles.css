@@ -116,12 +116,28 @@ Navbar and Navigation Styles / Overrides
 	position: absolute;
 	padding-top: 10px;
 }
+.navbar-nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    /* padding-right: 6%; */
+    padding-right: 1%;
+    argin-bottom: 0;
+    grid-gap: 68px;
+    margin-right: -1%;
+    margin-left: -17%;
+    list-style: none;
+
+}
 
 .navbar-nav li a {
 	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 0.3px;
-	font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+	font-size: 1.5rem;
+    text-decoration: none;
 }
 
 .dropdown.open .dropdown-menu li a {
@@ -133,7 +149,7 @@ Navbar and Navigation Styles / Overrides
 }
 
 .navbar-nav > li:first-child {
-	margin-right: 25px;
+	margin-right: -205px;
 }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {

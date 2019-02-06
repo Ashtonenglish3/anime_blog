@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <% include partials/head.ejs %>
+  </head>
+  <body>
+       
+      <% include partials/nav.ejs %>
+
+    <div id="hero-image">
+        <h1 id="hero-title"><%= title %></h1>
+        <h1 id="hero-title2"><%= title2 %></h1>
+        <h1 id="hero-title3"><%= title3 %></h1>
+    </div>
+
+    <div class="poster-info-overlay">
+    <h1><%= title4 %></h1>
+    </div>
+    <div class="text">
+  <% for (var i = 0;i < about.length; i++){%>
+    <p><%= about[i].description %></p>
+    </div>
+    <% } %>
+     <div id="posters-wrapper" class="content-padding clearfix">
+
+      <%  for (var i = 0; i < anime.length; i++) { %>
+        <div class="poster">
+        <img src="/images/<%= anime[i].poster %> " class="img-responsive" alt="">
+        <div class="poster-info-overlay">
+          <h2><%= anime[i].title %></h2>
+          <p><%= anime[i].sub_description %></p>
+          <p>Read more<i class="fas fa-angle-right"></i></p>
+        </div>
+      </div> 
+        <% } %>
+      
+     </div>
+
+ 
+    <% include partials/scripts.ejs %>
+  </body>
+</html>

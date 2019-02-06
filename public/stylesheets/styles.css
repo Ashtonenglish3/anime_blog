@@ -93,6 +93,14 @@ Hero Image / Title Styles
 	letter-spacing: 0.4px;
 	font-family: fantasy;
 }
+.poster-info-overlay h1{
+	margin-left: 6%;
+    font-size: 3.34rem;
+}
+.text p{
+	margin-left: 6%;
+	padding-right: 15%;
+}
 /*------------------image----------------------------*/
 .img-responsive{
 	width: 433px;

@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //home
-app.get('/', routes.home);
+app.get('/', routes.index);
 
 // app.get('/darth', function(req, res) {
 //     res.send("This is a server  response on the darth page");

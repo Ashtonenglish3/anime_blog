@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <% include partials/head.ejs %>
+  </head>
+  <body>
+       
+     
+
+    <div id="hero-image-single" style="background-image:url('/images/<%= animes.hero_image %>')" >
+       <% include partials/nav.ejs %>
+        <h1 id="hero-title"><%= title %></h1>
+       
+    </div>
+
+   <div class="content-paddding clearfix">
+       <div class="poster-wrapper">
+           <img src="/images/<%= animes.poster %>" class="image-responsive" alt="">
+       </div>
+   </div>
+ 
+    <% include partials/scripts.ejs %>
+  </body>
+</html>

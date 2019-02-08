@@ -13,11 +13,22 @@
        
     </div>
 
-   <div class="content-paddding clearfix">
+   <div class="content-paddding clearfix" style="
+   display: grid;
+   grid-template-columns: auto auto;
+">
        <div class="poster-wrapper">
            <img src="/images/<%= animes.poster %>" class="image-responsive" alt="">
        </div>
+<div class="description-wrapper">
+    <div class="description">
+        <h2 class="anime-header">description</h2>
+        <p><%= anime.description %></p>
+    </div>
+</div>
+
    </div>
+   
  
     <% include partials/scripts.ejs %>
   </body>

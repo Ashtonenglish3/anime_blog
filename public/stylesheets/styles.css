@@ -16,7 +16,11 @@ body {
     grid-gap: 3%;
     padding-top: 4%;
 }
-
+.content-paddding clearfix{
+	grid-template-columns: auto auto ;
+    padding-right: 8%;
+    display: grid;
+}
 
 
 /* --------------------------
@@ -30,6 +34,7 @@ Hero Image / Title Styles
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	background-attachment: fixed;
 }
 
 #hero-image::before {
@@ -169,7 +174,7 @@ Navbar and Navigation Styles / Overrides
 }
 .navbar-nav {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
@@ -348,8 +353,13 @@ Movie-Single Poster and Description Styles
 	width: 30%;
 	margin-top: 50px;
 }
-
-.description-wrapper {
+.poster-wrapper img{
+	    width: 652px;
+    vertical-align: middle;
+    border-style: none;
+    height: 554px;
+}
+ .description-wrapper {
 	float: right;
 	margin-left: 5%;
 	width: 65%;

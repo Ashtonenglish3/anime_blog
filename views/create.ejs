@@ -8,19 +8,72 @@
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
+  <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 <body>
-
-
-
-
-
+        <% include partials/nav.ejs %>
+        <div class="container">
+        
+                <div class="panel panel">
+                    <div class="panel panel-heading text-center">
+                        <h1>Share your ideas on Anime</h1>
+                    </div>    
+                                   
+                        <form  action="">
+                            <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                                <label for="exampleInputName">Name of Anime</label>
+                                <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Name" name="name">
+                                 
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                                <label for="exampleInputURL">Image URL</label>
     
+                                <input type="text" class="form-control click2edit" id="exampleInputURL" placeholder="Link of image" name="image_url">
+                            </div> 
+                             <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                                    <label for="exampleInputDescription">description</label>
+                                    <input type="text" class="form-control click2edit" id="exampleInputDescription" placeholder=" description" name="description">
+                                </div>
+
+                               
+                            </div> 
+                            <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
+                            <button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>
+                            <div class="click2edit">click2edit</div>
+                                <!-- <div class="form-group">
+                                        <label for="message">Message:</label>
+                                        <textarea class="input-block-level summernote-modal"  id="textfield" name="message"></textarea>
+                                    </div> -->
+        
+                                    <!-- <input type="text" name="subject" class="form-control" id="subject" placeholder="Write your subject" required/> -->
+                                    
+        
+                            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                <button type="submit" class="btn btn-success btn-block">ADD a POST</button>
+                            </div>
+                        </form>
+        
+                    </div>
+                    
+                    
+                </div> 
+
+
+
+
   <div id="summernote"><p>Hello Summernote</p></div>
   <script>
     $(document).ready(function() {
         $('#summernote').summernote();
     });
+    var edit = function() {
+  $('.click2edit').summernote({focus: true});
+};
+
+var save = function() {
+  var markup = $('.click2edit').summernote('code');
+  $('.click2edit').summernote('destroy');
+};
   </script>
 </body>
 </html>

@@ -29,10 +29,15 @@ exports.anime_single = function(req, res){
     var animes = anime[episode_number - 1];
 
     var title =  animes.title;
+     
+    var description = anime.description;
 
-    res.render('anime_single', {
+     res.render('anime_single', {
          anime : anime,
          title : title,
-         animes : animes
+         animes : animes,
+         description : description
     });
     };
+
+    

@@ -7,7 +7,10 @@ body {
 	color: #333;
 	letter-spacing: 1px;
 }
-
+html, body {
+    width: auto;
+    overflow-x: hidden
+  } 
 .content-padding {
 	padding-left: 6%;
     grid-template-columns: auto auto auto;

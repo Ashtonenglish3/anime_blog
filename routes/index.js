@@ -30,7 +30,7 @@ exports.anime_single = function(req, res){
 
     var title =  animes.title;
      
-    var description = anime.description;
+    var description = animes.description;
 
      res.render('anime_single', {
          anime : anime,
